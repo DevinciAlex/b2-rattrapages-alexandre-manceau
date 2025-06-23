@@ -1,0 +1,42 @@
+CREATE TABLE users (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    Firstname VARCHAR(255) NOT NULL,
+    Lastname VARCHAR(255) NOT NULL,
+    Address VARCHAR(255),
+    City VARCHAR(255),
+    State VARCHAR(255),
+    Email VARCHAR(255),
+    Price INT,
+    Idstatus INT,
+    FOREIGN KEY (Idstatus) REFERENCES status(id)
+);
+------
+DELIMITER //
+
+CREATE PROCEDURE CreateUser(
+    IN Firstname VARCHAR(255),
+    IN Lastname VARCHAR(255),
+    IN Address VARCHAR(255),
+    IN City VARCHAR(255),
+    IN State VARCHAR(255),
+    IN Email VARCHAR(255),
+    IN Price INT
+)
+BEGIN
+    INSERT INTO users (Firstname, Lastname, Address, City, State, Email, Price, id)
+    VALUES (Firstname, Lastname, Address, City, State, Email, Price);
+END //
+
+DELIMITER ;
+-----
+CREATE TABLE Status (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    status VARCHAR(255)
+);
+
+INSERT INTO status (status)
+VALUES 
+  ('en cours'),
+  ('réalisée'),
+  ('annulée');
+-----

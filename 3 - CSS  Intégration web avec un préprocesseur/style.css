@@ -1,0 +1,378 @@
+* {
+  margin: 0;
+  top: 0;
+  padding: 0;
+  box-sizing: border-box; /* Pour que le padding et la bordure soient inclus dans la largeur et la hauteur */
+}
+
+@font-face {
+  font-family: "PoppinsBold";
+  src: url("Typos/Poppins-Bold.ttf");
+}
+@font-face {
+  font-family: "PoppinsRegular";
+  src: url("Typos/Poppins-Regular.ttf");
+}
+@font-face {
+  font-family: "PoppinsLight";
+  src: url("Typos/Poppins-Light.ttf");
+}
+@font-face {
+  font-family: "PoppinsThinItalic";
+  src: url("Typos/Poppins-ThinItalic.ttf");
+}
+section {
+  page-break-before: always; /* chaque <section> commence sur une nouvelle page */
+  height: 100vh;
+  background-repeat: no-repeat;
+  overflow: hidden;
+}
+section img {
+  width: 100%; /* L'image prend toute la largeur de la section */
+  height: auto; /* Hauteur automatique pour garder les proportions */
+}
+section h2 {
+  font-size: 5rem;
+}
+section .green {
+  font-family: "PoppinsRegular";
+  color: #b2d234;
+}
+section .white {
+  font-family: "PoppinsRegular";
+  font-size: 5rem;
+  color: white;
+  margin-bottom: 2rem;
+}
+
+.green-button {
+  background-color: #b2d234;
+  color: white;
+  padding-left: 4rem;
+  padding-right: 4rem;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  font-size: 2rem;
+  border-radius: 8px;
+  border: none;
+}
+
+.white-button {
+  background-color: white;
+  color: #b2d234;
+  padding-left: 4rem;
+  padding-right: 4rem;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  font-size: 2rem;
+  border-radius: 8px;
+  border: none;
+}
+
+p {
+  font-family: "PoppinsRegular";
+  font-size: 1.7rem;
+}
+
+br {
+  margin-bottom: 1rem; /* Espace entre les lignes */
+}
+
+section:first-child {
+  page-break-before: auto;
+}
+
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  margin: 3rem;
+  width: 100vw;
+  color: #fff;
+  z-index: 1000;
+  display: flex;
+}
+header img {
+  height: 10vh;
+  width: auto;
+}
+header nav {
+  display: flex;
+  justify-content: flex-end;
+  width: 100%;
+  height: 100%;
+  margin-right: 7rem;
+}
+header nav ul {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  list-style: none;
+  gap: 2rem;
+}
+header nav ul li {
+  font-family: "PoppinsLight";
+  font-size: 2rem;
+}
+
+footer {
+  background-color: #b2d234;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 30vh;
+}
+footer img {
+  display: flex;
+  margin: 3rem;
+  height: 10vh;
+  width: auto;
+}
+footer h1 {
+  font-family: "PoppinsRegular";
+  font-size: 2rem;
+  color: white;
+}
+footer ul {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  list-style: none;
+  gap: 12rem;
+  margin-right: 12rem;
+}
+footer ul li p {
+  font-family: "PoppinsLight";
+  font-size: 1.5rem;
+  color: white;
+  text-align: center;
+}
+
+#Accueil {
+  background-image: linear-gradient(143.2deg, rgba(126, 207, 255, 0.62) 40%, rgba(213, 252, 98, 0.62) 100%), url("Assets/luisa-brimble-2RrBE90w0T8-unsplash.jpg");
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+}
+#Accueil h1 {
+  font-family: "PoppinsRegular";
+  font-size: 8rem;
+  text-align: center;
+}
+#Accueil p {
+  font-family: "PoppinsLight";
+  font-style: italic;
+  font-size: 4rem;
+  margin-top: -1rem;
+  margin-left: 10rem;
+  transform: rotate(-10deg);
+}
+
+#QUI1 {
+  background-image: url("Assets/salade-detoure.png");
+  background-size: 100vh;
+  background-position: 100%;
+}
+#QUI1 div {
+  margin: 10%;
+}
+#QUI1 div p {
+  width: 45%;
+}
+
+#QUI2 {
+  background-image: url("Assets/ismael-trevino-NDyuR4Huig8-unsplash.jpg");
+  background-size: cover;
+  background-position: 100%;
+}
+#QUI2 div {
+  background-color: rgba(178, 210, 52, 0.62);
+  margin-left: 40%;
+  margin-right: 5%;
+  margin-top: 5%;
+  color: white;
+  text-align: center;
+  padding: 2rem;
+}
+#QUI2 div h2 {
+  line-height: 6rem;
+}
+
+#Menu {
+  margin: 10%;
+  margin-top: 5%;
+}
+#Menu h2 {
+  text-align: center;
+}
+#Menu .MenuIntro {
+  font-family: "PoppinsRegular";
+  font-size: 1.5rem;
+  margin-bottom: 2rem;
+  text-align: center !important;
+}
+#Menu ul .ligne-menu {
+  display: flex;
+  justify-content: space-between;
+}
+#Menu ul .ligne-menu div {
+  font-family: "PoppinsRegular";
+  font-size: 2rem;
+}
+#Menu ul li {
+  list-style: none;
+  margin-bottom: 5%;
+}
+#Menu ul p {
+  font-family: "PoppinsRegular";
+  font-size: 1.2rem !important;
+}
+#Menu .Menu-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: stretch;
+  gap: 2rem;
+}
+#Menu .Menu-wrapper .Menu {
+  width: 50%;
+  box-sizing: border-box;
+}
+#Menu .Menu-wrapper .Menu .blue {
+  color: #60a0d8;
+}
+#Menu .Menu-wrapper #MenuCommande {
+  margin-top: 2%;
+}
+#Menu .Menu-wrapper #MenuCommande .green, #Menu .Menu-wrapper #MenuCommande .blue {
+  font-style: italic;
+  transform: rotate(-10deg);
+  font-size: 4rem;
+  text-align: center;
+}
+#Menu .Menu-wrapper #MenuCommande .text {
+  text-align: center;
+  margin-top: 20%;
+}
+#Menu .Menu-wrapper #MenuCommande .button {
+  display: flex;
+  justify-content: center;
+  margin-top: 10%;
+}
+
+#ingredient {
+  background-image: url("Assets/louis-hansel-MlPD-AzZYMg-unsplash.jpg");
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+}
+#ingredient ul {
+  columns: 2;
+}
+#ingredient ul li {
+  list-style: none;
+  font-family: "PoppinsRegular";
+  font-size: 1.5rem;
+}
+#ingredient h2 {
+  font-family: "PoppinsRegular";
+  font-size: 5rem;
+  text-align: center;
+}
+#ingredient .green-ingredient {
+  background-color: rgba(178, 210, 52, 0.85);
+  margin-right: 1%;
+  text-align: center;
+  padding-top: 5vh;
+  padding-right: 5%;
+  padding-left: 5%;
+  padding-bottom: 5%;
+  height: 55vh;
+  width: 80vh;
+}
+#ingredient .blue-ingredient {
+  background-color: rgba(96, 160, 216, 0.85);
+  margin-left: 1%;
+  text-align: center;
+  padding-top: 5vh;
+  padding-right: 5%;
+  padding-left: 5%;
+  height: 55vh;
+  width: 80vh;
+}
+
+#Contact {
+  display: flex;
+  align-items: center;
+  margin-right: 5%;
+}
+#Contact input {
+  font-size: 1.5rem;
+}
+#Contact .image-wrapper {
+  width: 52vh;
+  height: 52vh;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-content: space-between;
+  margin: 10rem;
+}
+#Contact .image-wrapper .img-part {
+  display: flex;
+  width: 25vh;
+  height: 25vh;
+  background-image: url("Assets/anh-nguyen-_Uqj5BQb-mw-unsplash.jpg");
+  background-size: 200% 200%;
+  background-repeat: no-repeat;
+}
+#Contact .image-wrapper .haut-gauche {
+  background-position: left top;
+}
+#Contact .image-wrapper .haut-droit {
+  background-position: right top;
+}
+#Contact .image-wrapper .bas-gauche {
+  background-position: left bottom;
+}
+#Contact .image-wrapper .bas-droit {
+  background-position: right bottom;
+}
+#Contact .contact-form {
+  max-width: 50%;
+}
+#Contact .contact-form .form {
+  width: 100%;
+}
+#Contact .contact-form .form .row {
+  display: flex;
+  gap: 2rem;
+}
+#Contact .contact-form .form .field {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+#Contact .contact-form .form #email {
+  width: 100%;
+}
+#Contact .contact-form .form #message {
+  width: 100%;
+  height: 20vh;
+}
+#Contact .contact-form .form .button {
+  display: flex;
+  justify-content: center;
+  margin-top: 5rem;
+}
+#Contact .contact-form h2 {
+  font-size: 5rem;
+  text-align: center;
+}
+
+/*# sourceMappingURL=style.css.map */
